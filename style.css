@@ -22,7 +22,7 @@
 
 .light {
   --text-color: black;
-  --bg-url: url(./assets/bg-desktop-light\ \(1\).png); /* caminho para a imagem de fundo light */
+  --bg-url: url(./assets/bg-mobile-light.png); /* caminho para a imagem de fundo light */
   --stroke-color: rgba(0, 0, 0, 0.5); /* cor da borda */
   --surface-color: rgba(0, 0, 0, 0.1); /* cor de fundo dos links */
   --surface-color-hover: rgba(
@@ -40,6 +40,7 @@ body {
   background-repeat: no-repeat; /* para não repetir a imagem */
   background-position: top center; /* para posicionar a imagem no topo e centralizada */
   background-size: cover; /* para garantir que a imagem cubra toda a área do fundo */
+  height: 100vh;
 }
 
 body * {
@@ -159,4 +160,15 @@ ul li a:hover {
 
 #SocialLinks a:hover {
   background: var(--highlight-color);
+}
+
+/* media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg); /* caminho para a imagem de fundo normal */
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.png); /* caminho para a imagem de fundo light */
+  }
 }
